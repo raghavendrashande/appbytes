@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 // ignore: must_be_immutable
 class Newscard extends StatelessWidget {
@@ -30,9 +32,12 @@ class Newscard extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     const SizedBox(height: 10),
-                    Image(
-                      image: NetworkImage(src),
-                      fit: BoxFit.fitWidth,
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image(
+                        image: NetworkImage(src),
+                        fit: BoxFit.fill,
+                      ),
                     ),
                     Text(
                       title,
@@ -40,14 +45,14 @@ class Newscard extends StatelessWidget {
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
-                        fontSize: 30
+                        fontSize: 24
                       ),
                     ),
                     Text(
                       bodytxt,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 185, 184, 184),
                         fontSize: 16
                       ),
                     ),
