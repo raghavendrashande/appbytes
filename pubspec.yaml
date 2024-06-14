@@ -10,6 +10,10 @@ dependencies:
   flutter:
     sdk: flutter
   swipable_stack: ^2.0.0
+  http: ^1.2.0
+  google_generative_ai: ^0.4.3
+  link_text: ^0.2.1
+
 
 dev_dependencies:
   flutter_test:
